@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # Next.js Development Server
+  nextjs-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=development-secret-key
+      - DJANGO_API_URL=http://localhost:8000
+      - DJANGO_API_BASE_URL=http://localhost:8000/core-api
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - homealign-dev-network
+    restart: unless-stopped
+    command: npm run dev
+
+networks:
+  homealign-dev-network:
+    driver: bridge

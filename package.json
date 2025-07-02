@@ -1,0 +1,48 @@
+{
+  "name": "homealign-nextjs-mvp",
+  "version": "1.0.0",
+  "description": "Next.js MVP for Django homeAlign Core API management",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "build:staging": "NODE_ENV=production next build",
+    "build:production": "NODE_ENV=production next build",
+    "start:staging": "NODE_ENV=production next start",
+    "start:production": "NODE_ENV=production next start",
+    "export": "next export",
+    "analyze": "ANALYZE=true next build",
+    "clean": "rm -rf .next out",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.294.0",
+    "next-auth": "^4.24.0",
+    "axios": "^1.6.0",
+    "js-cookie": "^3.0.5",
+    "tailwindcss": "^3.3.6",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/js-cookie": "^3.0.6",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
